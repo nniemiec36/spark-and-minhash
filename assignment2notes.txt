@@ -1,0 +1,53 @@
+    
+PART II.B
+# def calcMinHash(row,hash_funcs):
+#     return [min(map(lambda x:((x*hash_func[0]+hash_func[1])%mod_val), row)) for hash_func in hash_funcs]
+
+    
+    # testing this
+    # pp.pprint(new_rdd.take(1))
+    # new_rdd = hospitals_rdd.map(lambda x: )
+    # MinHash applies a random hash function g to each element in the set and take the minimum of all hashed values:
+    # instead of the for loops, use maps and reduce (any of the spark transformations) also reducebykey
+    # what function are we implementing
+    # will it be a set of hashes like
+    # (id number, set(0.23, 0.00034, 0.55, ....)) ? or one hash (id number, set(0.23824)) ?
+    # (id num, [] list of 100 mins, but sid[hash min]])
+    # hosp id, elements would be input (as the rdd)
+    # elements are a list of strs, each of which need to be hashed 100x once for each of the 100 hash functions
+    # output: for every hash func, what was the min value that any of the features hashed to
+    # don't need to know which feature
+    # 100 numbers that represent what's been seen thus far (signature id)
+    # sig matrix
+    # ((hospital pk (col), hash index (row)), min value) --> defines what's in the sig matrix
+    # (('330231', 0), 3036588)
+    # (('330231', 1), 2299385)
+    # what is the sig matrix where is it hmmm
+    # doesn't have to be whole row stored together
+
+
+PART II.C
+# Divides a signature into bands of size bandwidth
+# For rows in each band, compute a hashcode. The hashcode is
+# decimal representation of string formed by characters in a row:
+# For ex, if a row is 102a, its hashcode is 10 + 2*2 + 0*4 + 1*8 = 22
+# This hashfunction is unique for every unique key, which is very good for LSH
+# Output of this function is bucket number (i.e. hashcode) for every band in the signature.
+# Bandwidth parameter was tweaked to get 15-25 candidates for every query image
+# def computeBuckets2(hashCode, bandwidth=None):
+#     if(bandwidth == None):
+#         bandwidth = 1
+#     hashCode = format(int(hashCode,16),'b').zfill(4*128)
+#     bands = floor(len(hashCode)/bandwidth)
+#     buckets = []
+#     for i in range(0,bands):
+#         substr = hashCode[i*bandwidth:(i+1)*bandwidth]
+#         buckets.append(int(substr, 16))
+#     return np.array(buckets)
+
+# first we should split our signature vectors
+
+# Imagine we split a 100-dimensionality vector into 20 bands. That gives us 20 opportunities to identify matching sub-vectors between our vectors.
+
+# 20 bands of 5 rows ?
+

@@ -1,0 +1,45 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/usr/local/Cellar/apache-spark/3.2.1/libexec/jars/spark-unsafe_2.12-3.2.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+22/04/01 19:38:34 INFO SparkContext: Running Spark version 3.2.1
+22/04/01 19:38:34 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22/04/01 19:38:34 INFO ResourceUtils: ==============================================================
+22/04/01 19:38:34 INFO ResourceUtils: No custom resources configured for spark.driver.
+22/04/01 19:38:34 INFO ResourceUtils: ==============================================================
+22/04/01 19:38:34 INFO SparkContext: Submitted application: Homework 2
+22/04/01 19:38:34 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+22/04/01 19:38:34 INFO ResourceProfile: Limiting resource is cpu
+22/04/01 19:38:34 INFO ResourceProfileManager: Added ResourceProfile id: 0
+22/04/01 19:38:34 INFO SecurityManager: Changing view acls to: nicoleniemiec
+22/04/01 19:38:34 INFO SecurityManager: Changing modify acls to: nicoleniemiec
+22/04/01 19:38:34 INFO SecurityManager: Changing view acls groups to: 
+22/04/01 19:38:34 INFO SecurityManager: Changing modify acls groups to: 
+22/04/01 19:38:34 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(nicoleniemiec); groups with view permissions: Set(); users  with modify permissions: Set(nicoleniemiec); groups with modify permissions: Set()
+22/04/01 19:38:35 INFO Utils: Successfully started service 'sparkDriver' on port 55557.
+22/04/01 19:38:35 INFO SparkEnv: Registering MapOutputTracker
+22/04/01 19:38:35 INFO SparkEnv: Registering BlockManagerMaster
+22/04/01 19:38:35 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/04/01 19:38:35 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/04/01 19:38:35 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/04/01 19:38:35 INFO DiskBlockManager: Created local directory at /private/var/folders/lp/z4htvj094_x1brpb_jw85dv00000gn/T/blockmgr-1b9c51dd-0b65-437f-9adb-f7853fc35974
+22/04/01 19:38:35 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+22/04/01 19:38:35 INFO SparkEnv: Registering OutputCommitCoordinator
+22/04/01 19:38:35 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+22/04/01 19:38:35 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://nicoles-mbp.fios-router.home:4040
+22/04/01 19:38:36 INFO Executor: Starting executor ID driver on host nicoles-mbp.fios-router.home
+22/04/01 19:38:36 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 55559.
+22/04/01 19:38:36 INFO NettyBlockTransferService: Server created on nicoles-mbp.fios-router.home:55559
+22/04/01 19:38:36 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/04/01 19:38:36 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, nicoles-mbp.fios-router.home, 55559, None)
+22/04/01 19:38:36 INFO BlockManagerMasterEndpoint: Registering block manager nicoles-mbp.fios-router.home:55559 with 434.4 MiB RAM, BlockManagerId(driver, nicoles-mbp.fios-router.home, 55559, None)
+22/04/01 19:38:36 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, nicoles-mbp.fios-router.home, 55559, None)
+22/04/01 19:38:36 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, nicoles-mbp.fios-router.home, 55559, None)
+
+Distinct # of values:  79
+Median of all incomes:  29
+Mode of all incomes:  4
+Count per power of 10:  [('1', 853), ('10', 118), ('100', 19), ('1000', 8), ('10000', 2)]
+
